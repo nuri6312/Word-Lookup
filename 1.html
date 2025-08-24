@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Lookup Dictionary</title>
+  <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+  <div class="backdrop"></div>
+  <div class="wrap">
+    <h1 class="page-title">Word Lookup</h1>
+
+
+    <section class="hero">
+      <div class="card" style="max-width:720px;margin:0 auto;">
+        <label class="label" for="searchInput">Enter word or prefix</label>
+        <input id="searchInput" class="input" type="text" placeholder="Start typing…" autocomplete="off" />
+
+        <div class="actions">
+          <button class="btn" onclick="searchWord()">Search</button>
+          <button class="btn" onclick="getAutoSuggestions()">Suggestions</button>
+          <button class="btn" onclick="getSpellingCorrections()">Spell Check</button>
+        </div>
+
+        <div id="resultsSection" class="results">
+          <div class="results-title">Ready when you are ✨</div>
+          <div class="word-definition">Start by searching a word or try the Suggestions button.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      
+      <div class="divider"></div>
+      <div class="copy">© 2025 Word Lookup. All Rights Reserved.</div>
+    </footer>
+  </div>
+
+  <!-- Optional: keep PapaParse only if loading CSV on the client -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
